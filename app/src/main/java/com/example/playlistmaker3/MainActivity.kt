@@ -19,13 +19,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(displayIntent)
         }
 
-        val imageClickListener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Toast.makeText(this@MainActivity, "Нажали на кнопку!", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        imageSearch.setOnClickListener(imageClickListener)
 
         val buttonMedia = findViewById<Button>(R.id.button_media)
         buttonMedia.setOnClickListener {
@@ -38,14 +31,5 @@ class MainActivity : AppCompatActivity() {
             val displayIntent = Intent(this, SettingsActivity::class.java)
             startActivity(displayIntent)
         }
-
-        buttonMedia.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на кнопку!", Toast.LENGTH_SHORT).show()
-        }
-
-         buttonSetting.setOnClickListener {
-
-             Toast.makeText(this@MainActivity, "Нажали на кнопку!", Toast.LENGTH_SHORT).show()
-         }
     }
 }
