@@ -15,8 +15,8 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val share = findViewById<TextView>(R.id.share_app)
-        share.setOnClickListener {
+        val shareApp = findViewById<TextView>(R.id.share_app)
+        shareApp.setOnClickListener {
             val intent = Intent()
             intent.setAction(Intent.ACTION_SEND)
             intent.putExtra(
@@ -53,8 +53,7 @@ class SettingsActivity : AppCompatActivity() {
         val reternItem = findViewById<ImageView>(R.id.return_n)
 
         reternItem.setOnClickListener {
-            val displayIntent = Intent(this, MainActivity::class.java)
-            startActivity(displayIntent)
+            finish()
         }
 
         val switchItem = findViewById<Switch>(R.id.switch_id)

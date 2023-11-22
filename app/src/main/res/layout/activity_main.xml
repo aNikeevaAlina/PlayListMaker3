@@ -27,21 +27,37 @@
             android:text="@string/search"
             app:icon="@drawable/ic_search"
             style="@style/ButtonStyle"
-
+            app:iconPadding="10dp"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             />
 
         <Button
             android:id="@+id/button_media"
             android:text="@string/media"
             app:icon="@drawable/ic_library"
-            style="@style/ButtonStyle"/>
+            style="@style/ButtonStyle"
+            app:iconPadding="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginEnd="@dimen/margin_end"/>
 
         <Button
             android:id="@+id/button_setting"
             android:text="@string/setting"
             app:icon="@drawable/ic_setting"
             style="@style/ButtonStyle"
-            
+            app:iconPadding="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginEnd="@dimen/margin_end"
             />
 
 

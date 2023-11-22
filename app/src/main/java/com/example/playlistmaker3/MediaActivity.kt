@@ -22,8 +22,7 @@ class MediaActivity : AppCompatActivity() {
         val reternItem = findViewById<ImageView>(R.id.return_n)
 
         reternItem.setOnClickListener {
-            val displayIntent = Intent(this, MainActivity::class.java)
-            startActivity(displayIntent)
+            finish()
         }
 
 
@@ -61,7 +60,7 @@ class MediaActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val PRODUCT_AMOUNT = "PRODUCT_AMOUNT"
+        private const val PRODUCT_AMOUNT = "PRODUCT_AMOUNT"
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
