@@ -3,8 +3,11 @@ package com.example.playlistmaker3
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.Switch
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.playlistmaker2.R
 
 class SettingsActivity : AppCompatActivity() {
@@ -46,5 +49,22 @@ class SettingsActivity : AppCompatActivity() {
             myWebLink.data = Uri.parse("https://yandex.ru/legal/practicum_offer/")
             startActivity(myWebLink)
         }
+
+        val reternItem = findViewById<ImageView>(R.id.return_n)
+
+        reternItem.setOnClickListener {
+            val displayIntent = Intent(this, MainActivity::class.java)
+            startActivity(displayIntent)
+        }
+
+        val switchItem = findViewById<Switch>(R.id.switch_id)
+        switchItem.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }else{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
     }
+
 }

@@ -13,6 +13,7 @@
 
 
     <ImageView
+        android:id="@+id/return_n"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginTop="20dp"
@@ -39,6 +40,7 @@
 
 
         <Switch
+            android:id="@+id/switch_id"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/dark_theme"
