@@ -34,11 +34,11 @@ class SettingsActivity : AppCompatActivity() {
             intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("shchegolyaeva32@yandex.ru"))
             intent.putExtra(
                 Intent.EXTRA_SUBJECT,
-                "Сообщение разработчикам и разработчицам приложения Playlist Maker"
+                getString(R.string.support_title_text)
             )
             intent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Спасибо разработчикам и разработчицам за крутое приложение!"
+                getString(R.string.support_description_text)
             )
             startActivity(Intent.createChooser(intent, ""))
         }
