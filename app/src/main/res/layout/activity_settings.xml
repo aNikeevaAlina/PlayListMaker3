@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorPrimaryVariant"
     android:orientation="vertical"
     android:paddingVertical="14dp">
 
@@ -12,23 +12,24 @@
         android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/ic_arrow"
-        android:iconTint="@color/black"
-        app:iconGravity="textStart"/>
+        <ImageView
+            android:id="@+id/return_n"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow"
+            app:iconGravity="textStart" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="14dp"
-        android:text="@string/setting"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/ys_display_regular"
+            android:text="@string/setting"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="@dimen/text_size" />
 
     </FrameLayout>
 
@@ -39,13 +40,18 @@
 
 
         <Switch
+            android:id="@+id/switch_id"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/dark_theme"
-            android:textSize="16dp"
+            android:layout_alignParentRight="true"
             android:layout_marginVertical="@dimen/margin_vertical"
-            android:textColor="@color/black"
-            android:layout_marginStart="@dimen/margin_end_start"/>
+            android:layout_marginStart="@dimen/margin_end_start"
+            android:checked="false"
+            android:fontFamily="@font/ys_display_regular"
+            android:text="@string/dark_theme"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16dp"
+            android:theme="@style/SCBSwitch" />
 
     </FrameLayout>
 
@@ -54,45 +60,17 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/impart"
-            android:textSize="16dp"
-            android:layout_marginVertical="@dimen/margin_vertical"
-            android:textColor="@color/black"
-            android:layout_marginStart="@dimen/margin_end_start"
+            android:id="@+id/share_app"
+            style="@style/TextStyleSetting"
+            android:text="@string/impart" />
 
-            />
-    
         <ImageView
             android:layout_width="16dp"
             android:layout_height="18dp"
-            android:src="@drawable/ic_vector2"
             android:layout_gravity="end"
             android:layout_marginVertical="@dimen/margin_vertical"
-            android:layout_marginEnd="@dimen/margin_end_start"/>
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/support"
-        android:textSize="16dp"
-        android:layout_marginVertical="@dimen/margin_vertical"
-        android:textColor="@color/black"
-        android:layout_marginStart="@dimen/margin_end_start" />
-
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="19dp"
-        android:src="@drawable/ic_impart1"
-        android:layout_gravity="end"
-        android:layout_marginVertical="@dimen/margin_vertical"
-        android:layout_marginEnd="@dimen/margin_end_start"/>
+            android:layout_marginEnd="@dimen/margin_end_start"
+            android:src="@drawable/ic_vector2" />
     </FrameLayout>
 
     <FrameLayout
@@ -100,26 +78,36 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/agree"
-            android:textSize="16dp"
+            android:id="@+id/support"
+            style="@style/TextStyleSetting"
+            android:text="@string/support" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp"
+            android:layout_gravity="end"
             android:layout_marginVertical="@dimen/margin_vertical"
-            android:textColor="@color/black"
-            android:layout_marginStart="@dimen/margin_end_start" />
+            android:layout_marginEnd="@dimen/margin_end_start"
+            android:src="@drawable/support_icon" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/agree"
+            style="@style/TextStyleSetting"
+            android:text="@string/agree" />
 
         <ImageView
             android:layout_width="8dp"
             android:layout_height="14dp"
-            android:src="@drawable/ic_vector3"
             android:layout_gravity="end"
             android:layout_marginVertical="@dimen/margin_vertical"
-            android:layout_marginEnd="@dimen/margin_end_start"/>
+            android:layout_marginEnd="@dimen/margin_end_start"
+            android:src="@drawable/ic_vector3" />
     </FrameLayout>
-
-    
-
-
 
 </LinearLayout>
 
